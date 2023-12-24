@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <h2>Welcome to Bunk Manager</h2>
+        <h3> Goal Percentage: {{ goal }}%</h3>
+
+        <h3> Total classes: {{ total }}</h3>
+        <input type="number" v-model="total" @input="updateTotal" placeholder="Enter here">
+
+        <h3> Attended: {{ attended }}</h3>
+        <input type="number" v-model="attended" @input="updateAttended" placeholder="Enter here">
+
+        <h3> Current Percentage: {{ current }}%</h3>
+        
+        <button @click="calculate">
+            <span>Calculate Attendance</span>
+        </button>
+        <p>{{ message }}</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
