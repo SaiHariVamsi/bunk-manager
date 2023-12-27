@@ -31,7 +31,7 @@ const app = Vue.createApp({
             const totalClasses = this.total;
 
             if (attendedClasses > totalClasses) {
-                this.message = 'baane extralu dengutunnav ga';
+                this.message = 'Please enter valid data';
             }
             else{
                 var currentPercentage = (attendedClasses / totalClasses) * 100;
